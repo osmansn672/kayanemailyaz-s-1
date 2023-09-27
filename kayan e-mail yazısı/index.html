@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>HAREKETLI EMAIL</title>
+</head>
+<body>
+    <div class="input_container">
+        <input type="text" id="email" required autocomplete="off">
+        <label for="email">Email</label>   
+    </div>
+
+    <script>
+        const inputContainer = document.querySelector('.input_container');
+        const label = inputContainer.querySelector('label');
+        label.innerHTML = label.innerText.split('').map((letter, i) => `<span style="transition-delay: ${i * 100}ms">${letter}</span>`).join('');
+    </script>
+</body>
+</html>

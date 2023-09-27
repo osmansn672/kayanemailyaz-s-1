@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #66bdb3, #0093e9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_container {
+    position: relative;
+    width: 400px;
+}
+
+.input_container input {
+    width: 100%;
+    padding: 15px 0 5px 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: border-color 0.5s ease;
+}
+
+.input_container label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.input_container label span {
+    display: inline-block;
+    font-size: 20px;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input_container input:focus + label span {
+    transform: translateY(-35px);
+}
+
+.input_container input:focus {
+    border-color: #66bdb3; /* Giriş alanı odaklandığında kenar rengini değiştir */
+}
